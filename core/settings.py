@@ -58,7 +58,7 @@ MIDDLEWARE = [
 AUTH_USER_MODEL = 'user.Users'
 ROOT_URLCONF = 'core.urls'
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
+    'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
@@ -137,6 +137,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 from datetime import timedelta
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ("Bearer",),
